@@ -1,0 +1,135 @@
+.bg {
+    background-color: #363740;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginScreen {
+    max-width: 360px;
+    max-height: 600px;
+    width: 100vw;
+    /* padding: 0px 20px; */
+    margin: 0 auto;
+    background: #FFFFFF;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dashboard_logo .logo {
+    margin-top: 30px;
+    color: #3751FF;
+}
+
+.dashboard_logo .name{
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #A4A6B3;
+    opacity: 0.7;
+}
+
+.login_text .bold {
+    margin-top: 25px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #252733;
+}
+
+.login_text .normal {
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #9FA2B4;
+}
+
+.login_input, .login_submit {
+    display: grid;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.email_label, .password_label {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #9FA2B4;
+    display: block;
+    text-align: left;
+}
+
+.email_input, .password_input {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    height: 42px;
+    background: #FCFDFE;
+    border: 1px solid #F0F1F7;
+    border-radius: 8px;
+    padding: 0px 20px;
+}
+
+.password_input {
+    margin-bottom: 0;
+}
+
+.email_input::placeholder, .password_input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #4B506D;
+    opacity: 0.4;
+}
+
+.login_submit {
+    height: 30px;
+    background: #3751FF;
+    box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    padding-top: calc(20px - 20px/2 + 1px);
+    cursor: pointer;
+}
+
+.login_forgot {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #9FA2B4;
+}
+
+.login_link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #3751FF;
+    cursor: pointer;
+}

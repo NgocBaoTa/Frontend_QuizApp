@@ -101,7 +101,7 @@
 }
 
 .login_submit {
-    height: 30px;
+    height: 40px;
     background: #3751FF;
     box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
     border-radius: 8px;
@@ -112,6 +112,7 @@
     color: #FFFFFF;
     padding-top: calc(20px - 20px/2 + 1px);
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .login_forgot {
@@ -122,6 +123,7 @@
     text-align: center;
     letter-spacing: 0.3px;
     color: #9FA2B4;
+    margin-bottom: 10px;
 }
 
 .login_link {

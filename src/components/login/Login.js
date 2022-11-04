@@ -12,31 +12,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [errMessage, setErrMessage] = useState("");
 
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-  //   setErrMessage("");
-
-  //   const data = { email,  password };
-  //   const url = "https://backend-quiz-mindx.herokuapp.com/user/login";
-  //   const response = await fetch(url, {
-  //     method: "POST",
-  //     cache: "no-cache",
-  //     credentials: "same-origin",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     redirect: "follow",
-  //     referrerPolicy: "no-referrer",
-  //     body: JSON.stringify(data),
-  //   });
-
-  //   setLogin(true);
-  //   navigate("/");
-
-  //   console.log("response:", response.clone().json());
-  //   console.log(email, password);
-  //   console.log(response);
-  // };
 const handleLogin = async (e) => {
     e.preventDefault();
     setErrMessage("");
@@ -44,10 +19,10 @@ const handleLogin = async (e) => {
     try {
       const data = await handleSubmit(email, password);
       console.log(data);
-      if (data.data && data.data.errCode !== 0) {
+      if (data.data && data.data.success !== true) {
         setErrMessage(data.data.message);
       } else {
-        localStorage.setItem("user_token", JSON.stringify(data.data.token));
+        localStorage.setItem("user_token", JSON.stringify(data.data.accessToken));
         setLogin(true);
         navigate("/");
       }
@@ -67,7 +42,6 @@ const handleLogin = async (e) => {
       password,
     });
   };
- 
 
   const clickSignup = (e) => {
     setSignup(!signup);
@@ -110,13 +84,13 @@ const handleLogin = async (e) => {
             />
           </div>
 
+          <div className="err_message">{errMessage}</div>
           <div className="login_submit" onClick={handleLogin}>
             Log In
           </div>
-          {/* <div className="errMessage">{ errMessage}</div> */}
 
           <h4 className="login_forgot">
-            Don't have an account?
+            Don't have an account? {" "}
             <span className="login_link">Sign up</span>
           </h4>
         </div>

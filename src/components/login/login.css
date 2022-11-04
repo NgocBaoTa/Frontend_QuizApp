@@ -133,3 +133,9 @@
     color: #3751FF;
     cursor: pointer;
 }
+
+.err_message {
+    color: red; 
+    margin-top: 10px;
+    margin-bottom: -20px;
+}

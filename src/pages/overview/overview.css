@@ -1,0 +1,8 @@
+.overview {
+    display: flex;
+}
+
+.overview .overview_container {
+    flex: 6;
+    background-color: #F7F8FC;
+}

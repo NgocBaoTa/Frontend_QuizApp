@@ -5,6 +5,8 @@ import Sidebar from "../../components/sideBar/Sidebar";
 import Box from "../../components/overview_container/statisticBox/Box";
 import Chart from "../../components/overview_container/chart/Chart";
 import BoxChart from "../../components/overview_container/chart/BoxChart";
+import CategoryBox from "../../components/overview_container/bottom_box/categories/CategoryBox";
+import QuestionBox from "../../components/overview_container/bottom_box/questions/QuestionBox";
 
 function Overview() {
   return (
@@ -26,6 +28,11 @@ function Overview() {
             <BoxChart name="Users answering questions" value="20" />
             <BoxChart name="Average respond time" value="10s" />
           </div>
+        </div>
+
+        <div className="overview_bottomBoxes">
+          <CategoryBox />
+          <QuestionBox />
         </div>
       </div>
     </div>

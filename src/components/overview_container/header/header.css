@@ -84,3 +84,19 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+.btn_login {
+    background: #3751FF;
+    box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+    border-radius: 15px;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 80px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+}

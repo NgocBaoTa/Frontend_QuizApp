@@ -45,6 +45,7 @@ const handleLogin = async (e) => {
 
   const clickSignup = (e) => {
     setSignup(!signup);
+    navigate("/user/register")
   };
 
   return (
@@ -91,7 +92,7 @@ const handleLogin = async (e) => {
 
           <h4 className="login_forgot">
             Don't have an account? {" "}
-            <span className="login_link">Sign up</span>
+            <span className="login_link" onClick={clickSignup}>Sign up</span>
           </h4>
         </div>
       </div>

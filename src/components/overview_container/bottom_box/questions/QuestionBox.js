@@ -1,4 +1,5 @@
 import React from 'react'
+import "./questionBox.css"
 
 function QuestionBox() {
   return (
@@ -13,16 +14,16 @@ function QuestionBox() {
           <div className="question_value">500</div>
         </div>
         <div className="question_box-feature">
-          <div className="question_name">English</div>
-          <div className="question_value">40</div>
+          <div className="question_name">Posted questions today</div>
+          <div className="question_value">10</div>
         </div>
         <div className="question_box-feature">
-          <div className="question_name">Science</div>
-          <div className="question_value">30</div>
+          <div className="question_name">Updated questions today</div>
+          <div className="question_value">5</div>
         </div>
         <div className="question_box-feature">
-          <div className="question_name">Music</div>
-          <div className="question_value">20</div>
+          <div className="question_name">Questions per session</div>
+          <div className="question_value">10</div>
         </div>
       </div>
     </div>

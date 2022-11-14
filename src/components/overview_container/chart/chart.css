@@ -1,0 +1,12 @@
+.chart {
+    padding: 10px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: #252733;
+    margin-bottom: 25px;
+}

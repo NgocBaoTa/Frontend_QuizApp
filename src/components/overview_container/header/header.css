@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 260px;
 }
 
 .header_wrapper .header_name {

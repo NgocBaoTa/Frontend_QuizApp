@@ -1,0 +1,41 @@
+.statistic_box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #FFFFFF;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+}
+
+.statistic_box--name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #9FA2B4;
+}
+
+.statistic_box--counter {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #252733;
+}
+
+.statistic_box.active {
+    border: 1px solid #3751FF;
+}
+
+.statistic_box.active .statistic_box--counter {
+    color: #3751FF
+}
+
+.statistic_box.active .statistic_box--name {
+    color: #3751FF
+}

@@ -5,4 +5,28 @@
 .overview .overview_container {
     flex: 6;
     background-color: #F7F8FC;
+    margin-left: 220px;
+    padding-left: 40px;
+    padding-right: 26px;
+}
+
+.overview_boxes {
+    display: flex;
+    gap: 60px; 
+    margin-top: 25px;
+}
+
+.overview_charts {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+    height: 500px;
+}
+
+.overview_charts .boxes_chart {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    border-left: 1px solid #DFE0EB;
 }

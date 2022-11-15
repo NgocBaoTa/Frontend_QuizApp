@@ -37,7 +37,7 @@ const handleLogin = async (e) => {
   };
 
   const handleSubmit = (email, password) => {
-    return axios.post("https://backend-quiz-mindx.herokuapp.com/user/login", {
+    return axios.post("https://backend-quiz-mindx.herokuapp.com/auth/login", {
       email,
       password,
     });

@@ -61,7 +61,7 @@ function Header() {
   };
 
   const navigateToLogin = () => {
-    navigate("/user/login")
+    navigate("/auth/login")
   }
   return (
     <div className="header_wrapper">

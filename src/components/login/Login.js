@@ -45,7 +45,7 @@ const handleLogin = async (e) => {
 
   const clickSignup = (e) => {
     setSignup(!signup);
-    navigate("/user/register")
+    navigate("/auth/register")
   };
 
   return (

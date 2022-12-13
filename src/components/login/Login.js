@@ -37,7 +37,7 @@ const handleLogin = async (e) => {
   };
 
   const handleSubmit = (email, password) => {
-    return axios.post("https://backendquizapp.onrender.com/auth/login", {
+    return axios.post("https://backendquizapp.onrender.com/admin/login", {
       email,
       password,
     });

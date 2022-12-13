@@ -21,7 +21,7 @@ const Register = () => {
 
   const handleSubmit = async(e)=>{
     e.preventDefault();
-    const id = await axios.post("https://backend-quiz-mindx.herokuapp.com/admin/register", {
+    const id = await axios.post("https://backendquizapp.onrender.com/admin/register", {
       email :user.email,
       username : user.username,
       password : user.password,

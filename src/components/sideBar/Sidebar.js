@@ -30,21 +30,21 @@ function Sidebar() {
             </li>
           </Link>
 
-          <Link to="/users" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li>
               <PersonIcon className="icon" />
               <span>Users</span>
             </li>
           </Link>
 
-          <Link to="/categories" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li>
               <CategoryIcon className="icon" />
               <span>Categories</span>
             </li>
           </Link>
 
-          <Link to="/quizzes" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li>
               <QuizIcon className="icon" />
               <span>Quizzes</span>

@@ -7,15 +7,23 @@ import Chart from "../../components/overview_container/chart/Chart";
 import BoxChart from "../../components/overview_container/chart/BoxChart";
 import CategoryBox from "../../components/overview_container/bottom_box/categories/CategoryBox";
 import QuestionBox from "../../components/overview_container/bottom_box/questions/QuestionBox";
+import axios from "axios";
 
 function Overview() {
+  const handleSubmit = () => {
+    return axios
+      .get("https://backendquizapp.onrender.com/overview")
+      .then(function (response) {
+        console.log(response);
+      });
+  };
   return (
     <div className="overview">
       <Sidebar />
       <div className="overview_container">
         <Header />
         <div className="overview_boxes">
-          <Box name="Admins" counter="20" type="unactive" />
+          <Box name="Admins" counter="20" type="unactive" onClick={handleSubmit } />
           <Box name="Users" counter="300" type="active" />
           <Box name="Categories" counter="30" type="unactive" />
           <Box name="Quizzes" counter="500" type="unactive" />

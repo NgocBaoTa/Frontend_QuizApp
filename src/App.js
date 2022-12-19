@@ -25,7 +25,7 @@ function App() {
           element={login === true ? <Overview /> : <Login />}
         ></Route>
         {/* <Route path="/" element={<Overview />} /> */}
-        <Route path="/auth/login" element={<Login />} />
+        {/* <Route path="/auth/login" element={<Login />} /> */}
 
         <Route path="/auth/register" element={<Register />} />
       </Routes>

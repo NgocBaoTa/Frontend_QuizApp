@@ -26,6 +26,8 @@ const Register = () => {
       username : user.username,
       password : user.password,
     });
+
+    console.log(user)
   }
   return (
     <main className="main">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./overview.css";
 import Header from "../../components/overview_container/header/Header";
 import Sidebar from "../../components/sideBar/Sidebar";
@@ -10,23 +10,43 @@ import QuestionBox from "../../components/overview_container/bottom_box/question
 import axios from "axios";
 
 function Overview() {
-  const handleSubmit = () => {
-    return axios
-      .get("https://backendquizapp.onrender.com/overview")
-      .then(function (response) {
-        console.log(response);
-      });
-  };
+  const [statisticBox, setStatisticBox] = useState();
+  
+  useEffect(() => {
+    fetch("https://backendquizapp.onrender.com/overview")
+    .then((response) => response.json())
+    .then((json) => {
+      setStatisticBox(json);
+    });  
+  }, [])
+    console.log(statisticBox);
+
   return (
     <div className="overview">
       <Sidebar />
       <div className="overview_container">
         <Header />
         <div className="overview_boxes">
-          <Box name="Admins" counter="20" type="unactive" onClick={handleSubmit } />
-          <Box name="Users" counter="300" type="active" />
-          <Box name="Categories" counter="30" type="unactive" />
-          <Box name="Quizzes" counter="500" type="unactive" />
+          <Box
+            name="Admins"
+            counter={statisticBox.totalAdmins}
+            type="unactive"
+          />
+          <Box
+            name="Users"
+            counter={statisticBox.totalCategories}
+            type="active"
+          />
+          <Box
+            name="Categories"
+            counter={statisticBox.totalQuizes}
+            type="unactive"
+          />
+          <Box
+            name="Quizzes"
+            counter={statisticBox.totalUsers}
+            type="unactive"
+          />
         </div>
 
         <div className="overview_charts">

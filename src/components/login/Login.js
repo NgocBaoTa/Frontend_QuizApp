@@ -14,9 +14,10 @@ function Login() {
 
 const handleLogin = async (e) => {
     e.preventDefault();
-    setErrMessage("");
+  setErrMessage("");
     
-    try {
+  try {
+      
       const data = await handleSubmit(email, password);
       console.log(data);
       if (data.data && data.data.success !== true) {

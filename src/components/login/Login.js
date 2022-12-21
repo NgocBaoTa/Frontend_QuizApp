@@ -24,8 +24,12 @@ const handleLogin = async (e) => {
         setErrMessage(data.data.message);
       } else {
         localStorage.setItem("user_token", JSON.stringify(data.data.accessToken));
+        localStorage.setItem(
+          "username",
+          JSON.stringify(data.data.adminName)
+        );
         setLogin(true);
-        navigate("/");
+        navigate("/overview");
       }
     } catch (e) {
       if (e.response) {
@@ -38,7 +42,7 @@ const handleLogin = async (e) => {
   };
 
   const handleSubmit = (email, password) => {
-    return axios.post("https://backendquizapp.onrender.com/admin/login", {
+    return axios.post("https://backendquiz.onrender.com/admin/login", {
       email,
       password,
     });

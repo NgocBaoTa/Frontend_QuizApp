@@ -51,7 +51,7 @@
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     outline: 0px;
   }
   
@@ -95,4 +95,13 @@
   
   .loginbttm {
     padding: 0px;
+  }
+
+  .question {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #9FA2B4;
   }

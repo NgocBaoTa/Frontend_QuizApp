@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./header.css";
 import { LoginContext } from "../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
@@ -45,6 +45,10 @@ function stringAvatar(name) {
 function Header() {
   const navigate = useNavigate();
   const { setLogin, login } = useContext(LoginContext);
+  const adminName = localStorage.getItem("username")
+  const username = adminName.replaceAll('"', "");
+  console.log(typeof username)
+
   //Drop down
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -58,6 +62,9 @@ function Header() {
 
   const handleLogout = () => {
     setLogin(false);
+    navigate("/auth/login");
+    localStorage.removeItem("user_token")
+    localStorage.removeItem("username");
   };
 
   const navigateToLogin = () => {
@@ -80,7 +87,7 @@ function Header() {
         {login ? (
           <div>
             <div className="header_item">
-              <div className="header_item--nickname">Jone</div>
+              <div className="header_item--nickname">{ username }</div>
             </div>
 
             <div className="header_item">
@@ -93,7 +100,7 @@ function Header() {
                 <Tooltip title="Open settings">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Stack direction="row" spacing={2}>
-                      <Avatar {...stringAvatar("Jone")} />
+                      <Avatar {...stringAvatar(username)} />
                     </Stack>
                   </IconButton>
                 </Tooltip>

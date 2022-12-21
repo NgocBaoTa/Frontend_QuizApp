@@ -12,7 +12,7 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar_top">
         <Link
-          to="/"
+          to="/overview"
           className="sidebar_top--logo"
           style={{ textDecoration: "none" }}
         >
@@ -23,28 +23,28 @@ function Sidebar() {
 
       <div className="sidebar_content">
         <ul>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/overview" style={{ textDecoration: "none" }}>
             <li className="sidebar_item--active">
               <PieChartIcon className="icon" />
               <span>Overview</span>
             </li>
           </Link>
 
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/overview" style={{ textDecoration: "none" }}>
             <li>
               <PersonIcon className="icon" />
               <span>Users</span>
             </li>
           </Link>
 
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/overview" style={{ textDecoration: "none" }}>
             <li>
               <CategoryIcon className="icon" />
               <span>Categories</span>
             </li>
           </Link>
 
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/overview" style={{ textDecoration: "none" }}>
             <li>
               <QuizIcon className="icon" />
               <span>Quizzes</span>
@@ -55,5 +55,6 @@ function Sidebar() {
     </div>
   );
 }
+
 
 export default Sidebar;

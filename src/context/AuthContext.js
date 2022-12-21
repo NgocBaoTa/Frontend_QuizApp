@@ -7,7 +7,9 @@ function LoginProvider({ children }) {
   const [signup, setSignup] = useState(true);
 
   const [login, setLogin] = useState(
-    localStorage.getItem("user") ? Boolean(localStorage.getItem("user")) : false
+    localStorage.getItem("user_token")
+      ? Boolean(localStorage.getItem("user_token"))
+      : false
   );
 
   return (

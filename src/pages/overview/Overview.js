@@ -11,16 +11,21 @@ import axios from "axios";
 
 function Overview() {
   const [statisticBox, setStatisticBox] = useState();
-  
-  useEffect(() => {
-    fetch("https://backendquizapp.onrender.com/overview")
-    .then((response) => response.json())
-    .then((json) => {
-      setStatisticBox(json);
-    });  
-  }, [])
-    console.log(statisticBox);
+ useEffect(() => {
+   abc();
+ }, []);
+ const abc = async () => {
+   const data = await axios
+     .get("https://backendquiz.onrender.com/overview")
+     
+   console.log("datastatistic", data);
+   setStatisticBox(data.data)
+     
+     
+ };
 
+    console.log(statisticBox);
+   
   return (
     <div className="overview">
       <Sidebar />
@@ -29,22 +34,26 @@ function Overview() {
         <div className="overview_boxes">
           <Box
             name="Admins"
-            counter={statisticBox.totalAdmins}
+            counter={statisticBox?.totalAdmins}
+            // counter="2"
             type="unactive"
           />
           <Box
             name="Users"
-            counter={statisticBox.totalCategories}
+            counter={statisticBox?.totalCategories}
+            // counter="2"
             type="active"
           />
           <Box
             name="Categories"
-            counter={statisticBox.totalQuizes}
+            counter={statisticBox?.totalQuizes}
+            // counter="2"
             type="unactive"
           />
           <Box
             name="Quizzes"
-            counter={statisticBox.totalUsers}
+            counter={statisticBox?.totalUsers}
+            // counter="2"
             type="unactive"
           />
         </div>

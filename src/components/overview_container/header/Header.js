@@ -120,9 +120,9 @@ function Header() {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                 >
-                  <MenuItem onClick={handleCloseUserMenu}>
+                  {/* <MenuItem onClick={handleCloseUserMenu}>
                     <Typography textAlign="center">Profile</Typography>
-                  </MenuItem>
+                  </MenuItem> */}
                   <MenuItem onClick={handleCloseUserMenu}>
                     <Typography textAlign="center" onClick={handleLogout}>
                       Logout
